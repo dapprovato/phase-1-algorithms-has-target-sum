@@ -1,5 +1,17 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  // let totalSum
+
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      if (i !== j && array[i] + array[j] == target) {
+        return true;
+      }
+      // return (array[i] + array[j]) == target
+    }
+  }
+  return false;
+  
 }
 
 /* 
@@ -8,6 +20,14 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  iterate over each possible combination using
+  nested for loops??
+  if arr[0] + arr[1] === target
+  if arr[0] + arr[2] === target
+  if arr[0] + arr[3] === target
+  ...
+  if arr[1] + arr[0] === target
+  if arr[1] + arr[2] === target
 */
 
 /*
